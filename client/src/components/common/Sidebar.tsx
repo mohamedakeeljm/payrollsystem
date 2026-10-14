@@ -179,10 +179,59 @@ export const Sidebar: React.FC<SidebarProps> = ({
           })}
         </nav>
 
+        {/* Developer Contact Card */}
+        <div className="border-t border-brand-900/60 p-3.5 bg-brand-900/30">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-brand-300">
+            Lead Developer & Architect
+          </p>
+          <p className="text-xs font-bold text-white mt-0.5">Mohamed Akeel</p>
+
+          <div className="flex items-center gap-2 mt-2 pt-2 border-t border-brand-800/60">
+            {/* Portfolio Link */}
+            <a
+              href="https://mohamedakeel.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              title="Portfolio: https://mohamedakeel.vercel.app"
+              className="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-800/80 hover:bg-brand-700 text-brand-200 hover:text-white transition-colors"
+            >
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </a>
+
+            {/* Facebook Link */}
+            <a
+              href="https://facebook.com/itzakeeljm"
+              target="_blank"
+              rel="noreferrer"
+              title="Facebook: itzakeeljm"
+              className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#1877F2]/20 hover:bg-[#1877F2] text-[#1877F2] hover:text-white transition-colors"
+            >
+              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            {/* Email Link */}
+            <a
+              href="mailto:mohamedakeeljm@gmail.com"
+              title="Email: mohamedakeeljm@gmail.com"
+              className="flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white transition-colors"
+            >
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
         {/* Footer info */}
-        <div className="border-t border-brand-900/60 p-4 text-[11px] text-brand-400">
+        <div className="border-t border-brand-900/60 px-4 py-2 text-[10px] text-brand-400">
           <p className="font-semibold text-brand-200">SmartHR Lanka v1.0.0</p>
-          <p className="mt-0.5">Sri Lanka Compliant (EPF/ETF/APIT)</p>
         </div>
       </aside>
     </>

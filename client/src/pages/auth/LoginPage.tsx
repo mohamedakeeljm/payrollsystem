@@ -111,45 +111,93 @@ export const LoginPage: React.FC = () => {
                 onClick={() => setDemoAccount('admin@smarthr.lk')}
                 className="p-2 rounded-lg border border-slate-200 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 text-left transition-colors"
               >
-                <div className="font-bold text-slate-800">Super Admin</div>
-                <div className="text-[10px] text-slate-500">Full System Control</div>
+                <div className="font-bold text-slate-800">Mohamed Akeel</div>
+                <div className="text-[10px] text-slate-500">Super Admin (Founder & CTO)</div>
               </button>
               <button
                 type="button"
                 onClick={() => setDemoAccount('hrmanager@smarthr.lk')}
                 className="p-2 rounded-lg border border-slate-200 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 text-left transition-colors"
               >
-                <div className="font-bold text-slate-800">HR Manager</div>
-                <div className="text-[10px] text-slate-500">HR & Leaves</div>
+                <div className="font-bold text-slate-800">Fathima Farhana</div>
+                <div className="text-[10px] text-slate-500">HR Manager</div>
               </button>
               <button
                 type="button"
                 onClick={() => setDemoAccount('payroll@smarthr.lk')}
                 className="p-2 rounded-lg border border-slate-200 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 text-left transition-colors"
               >
-                <div className="font-bold text-slate-800">Payroll Manager</div>
-                <div className="text-[10px] text-slate-500">Salary & EPF/ETF</div>
+                <div className="font-bold text-slate-800">Mohamed Rizwan</div>
+                <div className="text-[10px] text-slate-500">Payroll Manager</div>
               </button>
               <button
                 type="button"
                 onClick={() => setDemoAccount('manager.eng@smarthr.lk')}
                 className="p-2 rounded-lg border border-slate-200 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 text-left transition-colors"
               >
-                <div className="font-bold text-slate-800">Dept Manager</div>
-                <div className="text-[10px] text-slate-500">Team Approvals</div>
+                <div className="font-bold text-slate-800">Mohamed Aslam</div>
+                <div className="text-[10px] text-slate-500">Engineering Lead</div>
               </button>
               <button
                 type="button"
                 onClick={() => setDemoAccount('kasun@smarthr.lk')}
                 className="p-2 col-span-2 rounded-lg border border-slate-200 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 text-left transition-colors"
               >
-                <div className="font-bold text-slate-800">Employee (Kasun Perera)</div>
-                <div className="text-[10px] text-slate-500">Self-Service Portal, Leaves & Payslips</div>
+                <div className="font-bold text-slate-800">Mohamed Nafees</div>
+                <div className="text-[10px] text-slate-500">Employee Self-Service (Leaves, Attendance, Payslips)</div>
               </button>
             </div>
             <p className="text-[10px] text-slate-400 text-center mt-2.5">
               Default password for all accounts is: <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">Admin@123</code>
             </p>
+          </div>
+        </div>
+
+        {/* Developer Contact Footer with Logos */}
+        <div className="mt-6 rounded-2xl bg-white border border-slate-200 p-4 shadow-sm text-center">
+          <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2">
+            Developed & Engineered by Mohamed Akeel
+          </p>
+          <div className="flex items-center justify-center gap-3">
+            {/* Portfolio */}
+            <a
+              href="https://mohamedakeel.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-brand-50 text-slate-700 hover:text-brand-600 text-xs font-semibold border border-slate-200 transition-colors"
+            >
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span>Portfolio</span>
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://facebook.com/itzakeeljm"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1877F2]/10 hover:bg-[#1877F2]/20 text-[#1877F2] text-xs font-semibold border border-[#1877F2]/30 transition-colors"
+            >
+              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span>itzakeeljm</span>
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:mohamedakeeljm@gmail.com"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold border border-emerald-200 transition-colors"
+            >
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span>Email</span>
+            </a>
           </div>
         </div>
       </div>

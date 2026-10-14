@@ -127,13 +127,13 @@ erDiagram
 
 All demo accounts are pre-seeded and accessible with the standard password: `Admin@123`
 
-| Role | Email Address | Access Scope |
-| :--- | :--- | :--- |
-| **Super Admin** | `admin@smarthr.lk` | Complete organization configuration, audit logs, settings |
-| **HR Manager** | `hrmanager@smarthr.lk` | Employee records, leave approvals, attendance adjustments |
-| **Payroll Manager** | `payroll@smarthr.lk` | Salary assignment, monthly payroll engine, lock & finalize |
-| **Dept Manager** | `manager.eng@smarthr.lk` | Engineering team attendance reviews and leave approvals |
-| **Employee** | `kasun@smarthr.lk` | Self-service portal: Clock In/Out, apply leave, download payslip |
+| Role | Staff Name | Email Address | Access Scope |
+| :--- | :--- | :--- | :--- |
+| **Super Admin** | **Mohamed Akeel** | `admin@smarthr.lk` | Full organization configuration, audit logs, and settings |
+| **HR Manager** | **Fathima Farhana** | `hrmanager@smarthr.lk` | Employee records, leave approvals, attendance adjustments |
+| **Payroll Manager** | **Mohamed Rizwan** | `payroll@smarthr.lk` | Salary assignment, monthly payroll engine, lock & finalize |
+| **Dept Manager** | **Mohamed Aslam** | `manager.eng@smarthr.lk` | Engineering team attendance reviews and leave approvals |
+| **Employee** | **Mohamed Nafees** | `kasun@smarthr.lk` | Self-service portal: Clock In/Out, apply leave, download payslip |
 
 *(The login screen also features one-click demo pill buttons to instantly populate credentials and test all 5 roles seamlessly!)*
 
@@ -267,6 +267,16 @@ docker exec -i smarthr_mysql mysql -u smarthr_user -psmarthr_secure_pass smarthr
 4. **Least-Privilege RBAC**: Verified at API controller and service layers, preventing client-side bypass.
 5. **Rate Limiting & Security Headers**: Helmet HTTP headers and IP-scoped rate-limiting on authentication endpoints.
 6. **Immutable Financial Snapshots**: Finalized payroll calculations are permanently frozen in relational tables and JSON snapshots so retroactive salary changes never alter historical records.
+
+---
+
+## 👨‍💻 Developer & Author Information
+
+**Mohamed Akeel** — Lead Full-Stack Software Engineer & System Architect
+
+- 🌐 **Portfolio**: [https://mohamedakeel.vercel.app](https://mohamedakeel.vercel.app)
+- 📘 **Facebook**: [@itzakeeljm](https://facebook.com/itzakeeljm)
+- ✉️ **Email**: [mohamedakeeljm@gmail.com](mailto:mohamedakeeljm@gmail.com)
 
 ---
 

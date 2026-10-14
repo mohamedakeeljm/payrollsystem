@@ -337,22 +337,23 @@ async function main() {
   const usersData = [
     {
       email: 'admin@smarthr.lk',
-      firstName: 'Priyantha',
-      lastName: 'Fernando',
+      firstName: 'Mohamed',
+      lastName: 'Akeel',
       role: 'SUPER_ADMIN',
       empCode: 'EMP-0001',
-      title: 'Chief Technology Officer',
+      title: 'Founder & Chief Technology Officer',
       deptId: deptEngineering.id,
       desigId: desigHeadEng.id,
       baseSalary: 450000,
       epfNo: 'EPF-1001',
       bankName: 'Commercial Bank of Ceylon',
       bankAcc: '8001234567',
+      personalEmail: 'mohamedakeeljm@gmail.com',
     },
     {
       email: 'hrmanager@smarthr.lk',
-      firstName: 'Dilani',
-      lastName: 'Wickramasinghe',
+      firstName: 'Fathima',
+      lastName: 'Farhana',
       role: 'HR_MANAGER',
       empCode: 'EMP-0002',
       title: 'HR Manager',
@@ -362,11 +363,12 @@ async function main() {
       epfNo: 'EPF-1002',
       bankName: 'Hatton National Bank',
       bankAcc: '5009876543',
+      personalEmail: 'farhana.hr@gmail.com',
     },
     {
       email: 'payroll@smarthr.lk',
-      firstName: 'Ramesh',
-      lastName: 'Jayawardena',
+      firstName: 'Mohamed',
+      lastName: 'Rizwan',
       role: 'PAYROLL_MANAGER',
       empCode: 'EMP-0003',
       title: 'Senior Payroll Specialist',
@@ -376,11 +378,12 @@ async function main() {
       epfNo: 'EPF-1003',
       bankName: 'Sampath Bank',
       bankAcc: '1004567890',
+      personalEmail: 'rizwan.fin@gmail.com',
     },
     {
       email: 'manager.eng@smarthr.lk',
-      firstName: 'Sanjaya',
-      lastName: 'Senanayake',
+      firstName: 'Mohamed',
+      lastName: 'Aslam',
       role: 'DEPT_MANAGER',
       empCode: 'EMP-0004',
       title: 'Engineering Lead',
@@ -390,11 +393,12 @@ async function main() {
       epfNo: 'EPF-1004',
       bankName: 'Commercial Bank of Ceylon',
       bankAcc: '8005551234',
+      personalEmail: 'aslam.eng@gmail.com',
     },
     {
       email: 'kasun@smarthr.lk',
-      firstName: 'Kasun',
-      lastName: 'Perera',
+      firstName: 'Mohamed',
+      lastName: 'Nafees',
       role: 'EMPLOYEE',
       empCode: 'EMP-0005',
       title: 'Senior Software Engineer',
@@ -404,6 +408,7 @@ async function main() {
       epfNo: 'EPF-1005',
       bankName: 'Bank of Ceylon',
       bankAcc: '0003456789',
+      personalEmail: 'nafees.swe@gmail.com',
     },
   ];
 
@@ -592,11 +597,12 @@ async function main() {
   console.log('🎉 SmartHR Lanka database seeding completed successfully!');
   console.log('-------------------------------------------------------');
   console.log('Demo Credentials for All Roles (Password: Admin@123):');
-  console.log('1. Super Admin:       admin@smarthr.lk');
-  console.log('2. HR Manager:         hrmanager@smarthr.lk');
-  console.log('3. Payroll Manager:    payroll@smarthr.lk');
-  console.log('4. Dept Manager:       manager.eng@smarthr.lk');
-  console.log('5. Employee:           kasun@smarthr.lk');
+  console.log('1. Super Admin:       admin@smarthr.lk      (Mohamed Akeel)');
+  console.log('2. HR Manager:         hrmanager@smarthr.lk  (Fathima Farhana)');
+  console.log('3. Payroll Manager:    payroll@smarthr.lk    (Mohamed Rizwan)');
+  console.log('4. Dept Manager:       manager.eng@smarthr.lk (Mohamed Aslam)');
+  console.log('5. Employee:           kasun@smarthr.lk      (Mohamed Nafees)');
+  console.log('Developer: Mohamed Akeel (Portfolio: https://mohamedakeel.vercel.app, FB: itzakeeljm)');
   console.log('-------------------------------------------------------');
 }
 
