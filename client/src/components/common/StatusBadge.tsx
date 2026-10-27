@@ -1,11 +1,12 @@
 import React from 'react';
 
 interface StatusBadgeProps {
-  status: string;
+  status?: string | null;
 }
 
-export const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
-  const normalized = status.toUpperCase();
+export const StatusBadge: React.FC<StatusBadgeProps> = ({ status = 'ACTIVE' }) => {
+  const safeStatus = typeof status === 'string' && status.trim() ? status : 'ACTIVE';
+  const normalized = safeStatus.toUpperCase();
 
   const getStyle = () => {
     switch (normalized) {
@@ -39,7 +40,7 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   };
 
   const getLabel = () => {
-    return status.replace(/_/g, ' ');
+    return safeStatus.replace(/_/g, ' ');
   };
 
   return (

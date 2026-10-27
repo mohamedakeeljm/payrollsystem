@@ -239,15 +239,15 @@ export const EmployeeDirectoryPage: React.FC = () => {
                     <td className="px-6 py-3.5">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs uppercase">
-                          {emp.firstName[0]}
-                          {emp.lastName[0]}
+                          {(emp.firstName || 'E')[0]}
+                          {(emp.lastName || 'M')[0]}
                         </div>
                         <div>
                           <p className="font-semibold text-slate-900">
                             {emp.firstName} {emp.lastName}
                           </p>
                           <p className="text-[11px] text-slate-400">
-                            {emp.employeeId} • {emp.workEmail}
+                            {emp.employeeId || emp.id} • {emp.workEmail}
                           </p>
                         </div>
                       </div>
@@ -259,10 +259,10 @@ export const EmployeeDirectoryPage: React.FC = () => {
                       {emp.designation?.title || 'Staff'}
                     </td>
                     <td className="px-6 py-3.5 text-slate-600 capitalize">
-                      {emp.employmentType.toLowerCase()}
+                      {(emp.employmentType || 'PERMANENT').toLowerCase()}
                     </td>
                     <td className="px-6 py-3.5">
-                      <StatusBadge status={emp.employmentStatus} />
+                      <StatusBadge status={emp.employmentStatus || (emp as any).status || 'ACTIVE'} />
                     </td>
                     <td className="px-6 py-3.5 text-right">
                       <div className="flex items-center justify-end gap-2">
@@ -450,8 +450,8 @@ export const EmployeeDirectoryPage: React.FC = () => {
           <div className="space-y-4 text-xs">
             <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
               <div className="w-12 h-12 rounded-full bg-brand-950 text-white flex items-center justify-center font-bold text-base">
-                {selectedEmp.firstName[0]}
-                {selectedEmp.lastName[0]}
+                {(selectedEmp.firstName || 'E')[0]}
+                {(selectedEmp.lastName || 'M')[0]}
               </div>
               <div>
                 <p className="text-base font-bold text-slate-900">
@@ -460,9 +460,9 @@ export const EmployeeDirectoryPage: React.FC = () => {
                 <p className="text-slate-500">{selectedEmp.designation?.title || 'Staff'}</p>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="font-mono bg-white px-2 py-0.5 rounded border text-[11px]">
-                    {selectedEmp.employeeId}
+                    {selectedEmp.employeeId || selectedEmp.id}
                   </span>
-                  <StatusBadge status={selectedEmp.employmentStatus} />
+                  <StatusBadge status={selectedEmp.employmentStatus || (selectedEmp as any).status || 'ACTIVE'} />
                 </div>
               </div>
             </div>

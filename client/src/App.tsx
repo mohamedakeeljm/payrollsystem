@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from './context/AuthContext';
 import { LoginPage } from './pages/auth/LoginPage';
 import { Layout } from './components/common/Layout';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { DashboardPage } from './pages/dashboard/DashboardPage';
 import { EmployeeDirectoryPage } from './pages/employees/EmployeeDirectoryPage';
 import { AttendancePage } from './pages/attendance/AttendancePage';
@@ -80,7 +81,9 @@ export const App: React.FC = () => {
 
   return (
     <Layout currentPath={currentPath} onNavigate={handleNavigate}>
-      {renderContent()}
+      <ErrorBoundary>
+        {renderContent()}
+      </ErrorBoundary>
     </Layout>
   );
 };
