@@ -1,0 +1,376 @@
+// SmartHR Lanka - Built-in Offline Demo & Vercel Mock Data Provider
+// Allows the live demo to run 100% client-side on Vercel without requiring a dedicated backend server!
+
+export interface MockUser {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  fullName: string;
+  role: string;
+  permissions: string[];
+  employeeId?: string;
+  employeeCode?: string;
+  organization: {
+    id: string;
+    name: string;
+    code: string;
+    currency: string;
+    timezone: string;
+  };
+}
+
+export const DEMO_USERS: Record<string, MockUser> = {
+  'admin@smarthr.lk': {
+    id: 'usr-001',
+    email: 'admin@smarthr.lk',
+    firstName: 'Mohamed',
+    lastName: 'Akeel',
+    fullName: 'Mohamed Akeel',
+    role: 'SUPER_ADMIN',
+    permissions: [],
+    employeeId: 'emp-001',
+    employeeCode: 'EMP-0001',
+    organization: {
+      id: 'org-001',
+      name: 'Lanka Tech Solutions (Pvt) Ltd',
+      code: 'LTS',
+      currency: 'LKR',
+      timezone: 'Asia/Colombo',
+    },
+  },
+  'hrmanager@smarthr.lk': {
+    id: 'usr-002',
+    email: 'hrmanager@smarthr.lk',
+    firstName: 'Fathima',
+    lastName: 'Farhana',
+    fullName: 'Fathima Farhana',
+    role: 'HR_MANAGER',
+    permissions: [],
+    employeeId: 'emp-002',
+    employeeCode: 'EMP-0002',
+    organization: {
+      id: 'org-001',
+      name: 'Lanka Tech Solutions (Pvt) Ltd',
+      code: 'LTS',
+      currency: 'LKR',
+      timezone: 'Asia/Colombo',
+    },
+  },
+  'payroll@smarthr.lk': {
+    id: 'usr-003',
+    email: 'payroll@smarthr.lk',
+    firstName: 'Mohamed',
+    lastName: 'Rizwan',
+    fullName: 'Mohamed Rizwan',
+    role: 'PAYROLL_MANAGER',
+    permissions: [],
+    employeeId: 'emp-003',
+    employeeCode: 'EMP-0003',
+    organization: {
+      id: 'org-001',
+      name: 'Lanka Tech Solutions (Pvt) Ltd',
+      code: 'LTS',
+      currency: 'LKR',
+      timezone: 'Asia/Colombo',
+    },
+  },
+  'manager.eng@smarthr.lk': {
+    id: 'usr-004',
+    email: 'manager.eng@smarthr.lk',
+    firstName: 'Mohamed',
+    lastName: 'Aslam',
+    fullName: 'Mohamed Aslam',
+    role: 'DEPT_MANAGER',
+    permissions: [],
+    employeeId: 'emp-004',
+    employeeCode: 'EMP-0004',
+    organization: {
+      id: 'org-001',
+      name: 'Lanka Tech Solutions (Pvt) Ltd',
+      code: 'LTS',
+      currency: 'LKR',
+      timezone: 'Asia/Colombo',
+    },
+  },
+  'kasun@smarthr.lk': {
+    id: 'usr-005',
+    email: 'kasun@smarthr.lk',
+    firstName: 'Mohamed',
+    lastName: 'Nafees',
+    fullName: 'Mohamed Nafees',
+    role: 'EMPLOYEE',
+    permissions: [],
+    employeeId: 'emp-005',
+    employeeCode: 'EMP-0005',
+    organization: {
+      id: 'org-001',
+      name: 'Lanka Tech Solutions (Pvt) Ltd',
+      code: 'LTS',
+      currency: 'LKR',
+      timezone: 'Asia/Colombo',
+    },
+  },
+};
+
+export const MOCK_DASHBOARD = {
+  totalEmployees: 28,
+  presentToday: 25,
+  absentToday: 2,
+  onLeaveToday: 1,
+  grossPayroll: 3850000,
+  netPayroll: 3420000,
+  pendingLeaves: 3,
+  pendingCorrections: 2,
+  epfEmployerTotal: 462000,
+  etfEmployerTotal: 115500,
+  departmentDistribution: [
+    { name: 'Engineering', count: 12 },
+    { name: 'Human Resources', count: 4 },
+    { name: 'Finance & Accounts', count: 5 },
+    { name: 'Operations', count: 7 },
+  ],
+  monthlyPayrollTrends: [
+    { month: 'May', gross: 3500000, net: 3120000 },
+    { month: 'Jun', gross: 3550000, net: 3160000 },
+    { month: 'Jul', gross: 3620000, net: 3210000 },
+    { month: 'Aug', gross: 3750000, net: 3330000 },
+    { month: 'Sep', gross: 3850000, net: 3420000 },
+  ],
+  attendanceTrends: [
+    { day: 'Mon', present: 27, absent: 1, leave: 0 },
+    { day: 'Tue', present: 26, absent: 1, leave: 1 },
+    { day: 'Wed', present: 28, absent: 0, leave: 0 },
+    { day: 'Thu', present: 25, absent: 2, leave: 1 },
+    { day: 'Fri', present: 27, absent: 1, leave: 0 },
+  ],
+  upcomingHolidays: [
+    { id: '1', name: 'Deepavali Festival Day', date: '2026-10-31', type: 'Public & Bank Holiday' },
+    { id: '2', name: 'Milad-Un-Nabi (Holy Prophet Birthday)', date: '2026-11-15', type: 'Public, Bank & Mercantile' },
+  ],
+};
+
+export const MOCK_EMPLOYEES = [
+  {
+    id: 'emp-001',
+    employeeNumber: 'EMP-0001',
+    firstName: 'Mohamed',
+    lastName: 'Akeel',
+    workEmail: 'admin@smarthr.lk',
+    phone: '+94 77 123 4567',
+    department: { name: 'Executive Management' },
+    designation: { title: 'Lead Software Architect & Super Admin' },
+    branch: { name: 'Colombo Head Office' },
+    status: 'ACTIVE',
+    employmentType: 'PERMANENT',
+    joinedDate: '2023-01-10',
+    baseSalary: 450000,
+  },
+  {
+    id: 'emp-002',
+    employeeNumber: 'EMP-0002',
+    firstName: 'Fathima',
+    lastName: 'Farhana',
+    workEmail: 'hrmanager@smarthr.lk',
+    phone: '+94 71 234 5678',
+    department: { name: 'Human Resources' },
+    designation: { title: 'Head of People & HR Operations' },
+    branch: { name: 'Colombo Head Office' },
+    status: 'ACTIVE',
+    employmentType: 'PERMANENT',
+    joinedDate: '2023-03-15',
+    baseSalary: 280000,
+  },
+  {
+    id: 'emp-003',
+    employeeNumber: 'EMP-0003',
+    firstName: 'Mohamed',
+    lastName: 'Rizwan',
+    workEmail: 'payroll@smarthr.lk',
+    phone: '+94 75 345 6789',
+    department: { name: 'Finance & Accounts' },
+    designation: { title: 'Senior Payroll Manager' },
+    branch: { name: 'Colombo Head Office' },
+    status: 'ACTIVE',
+    employmentType: 'PERMANENT',
+    joinedDate: '2023-05-01',
+    baseSalary: 295000,
+  },
+  {
+    id: 'emp-004',
+    employeeNumber: 'EMP-0004',
+    firstName: 'Mohamed',
+    lastName: 'Aslam',
+    workEmail: 'manager.eng@smarthr.lk',
+    phone: '+94 76 456 7890',
+    department: { name: 'Engineering' },
+    designation: { title: 'Director of Software Engineering' },
+    branch: { name: 'Colombo Head Office' },
+    status: 'ACTIVE',
+    employmentType: 'PERMANENT',
+    joinedDate: '2023-06-15',
+    baseSalary: 380000,
+  },
+  {
+    id: 'emp-005',
+    employeeNumber: 'EMP-0005',
+    firstName: 'Mohamed',
+    lastName: 'Nafees',
+    workEmail: 'kasun@smarthr.lk',
+    phone: '+94 78 567 8901',
+    department: { name: 'Engineering' },
+    designation: { title: 'Senior Fullstack Software Engineer' },
+    branch: { name: 'Kandy Regional Branch' },
+    status: 'ACTIVE',
+    employmentType: 'PERMANENT',
+    joinedDate: '2024-02-01',
+    baseSalary: 220000,
+  },
+];
+
+export const MOCK_PAYROLL_PERIODS = [
+  { id: 'prd-01', name: 'September 2026', startDate: '2026-09-01', endDate: '2026-09-30', status: 'CLOSED' },
+  { id: 'prd-02', name: 'October 2026', startDate: '2026-10-01', endDate: '2026-10-31', status: 'ACTIVE' },
+];
+
+export const MOCK_PAYROLL_RUNS = [
+  {
+    id: 'run-01',
+    runNumber: 'PR-2026-09-001',
+    periodId: 'prd-01',
+    periodName: 'September 2026',
+    status: 'FINALIZED',
+    totalEmployees: 28,
+    grossSalary: 3850000,
+    netSalary: 3420000,
+    epfEmployer: 462000,
+    etfEmployer: 115500,
+    epfEmployee: 308000,
+    apitTax: 122000,
+    processedDate: '2026-09-28',
+  },
+];
+
+export const MOCK_PAYSLIPS = [
+  {
+    id: 'ps-001',
+    slipNumber: 'SLIP-2026-09-001',
+    employeeId: 'emp-001',
+    employeeName: 'Mohamed Akeel',
+    employeeNumber: 'EMP-0001',
+    period: 'September 2026',
+    basicSalary: 450000,
+    budgetaryRelief: 5000,
+    transportAllowance: 45000,
+    telephoneAllowance: 15000,
+    grossEarnings: 515000,
+    epfEmployee: 36400,
+    epfEmployer: 54600,
+    etfEmployer: 13650,
+    apitTax: 42500,
+    totalDeductions: 78900,
+    netSalary: 436100,
+    status: 'PAID',
+  },
+  {
+    id: 'ps-005',
+    slipNumber: 'SLIP-2026-09-005',
+    employeeId: 'emp-005',
+    employeeName: 'Mohamed Nafees',
+    employeeNumber: 'EMP-0005',
+    period: 'September 2026',
+    basicSalary: 220000,
+    budgetaryRelief: 5000,
+    transportAllowance: 25000,
+    telephoneAllowance: 8000,
+    grossEarnings: 258000,
+    epfEmployee: 18000,
+    epfEmployer: 27000,
+    etfEmployer: 6750,
+    apitTax: 11500,
+    totalDeductions: 29500,
+    netSalary: 228500,
+    status: 'PAID',
+  },
+];
+
+export const MOCK_LEAVE_REQUESTS = [
+  {
+    id: 'lr-001',
+    employeeName: 'Mohamed Nafees',
+    leaveType: 'Annual Leave',
+    startDate: '2026-11-02',
+    endDate: '2026-11-04',
+    days: 3,
+    reason: 'Family visit to Batticaloa',
+    status: 'APPROVED',
+  },
+  {
+    id: 'lr-002',
+    employeeName: 'Fathima Farhana',
+    leaveType: 'Casual Leave',
+    startDate: '2026-11-10',
+    endDate: '2026-11-10',
+    days: 1,
+    reason: 'Personal urgent appointment',
+    status: 'PENDING',
+  },
+];
+
+export const MOCK_LEAVE_BALANCES = [
+  { leaveType: 'Annual Leave', total: 14, used: 4, remaining: 10 },
+  { leaveType: 'Casual Leave', total: 7, used: 2, remaining: 5 },
+  { leaveType: 'Medical Leave', total: 14, used: 1, remaining: 13 },
+  { leaveType: 'Maternity/Paternity', total: 5, used: 0, remaining: 5 },
+];
+
+export const MOCK_ATTENDANCE = [
+  {
+    id: 'att-001',
+    employeeName: 'Mohamed Akeel',
+    date: '2026-10-28',
+    clockIn: '08:45 AM',
+    clockOut: '05:30 PM',
+    status: 'PRESENT',
+    hoursWorked: 8.75,
+  },
+  {
+    id: 'att-002',
+    employeeName: 'Mohamed Nafees',
+    date: '2026-10-28',
+    clockIn: '09:00 AM',
+    clockOut: '05:45 PM',
+    status: 'PRESENT',
+    hoursWorked: 8.75,
+  },
+  {
+    id: 'att-003',
+    employeeName: 'Mohamed Rizwan',
+    date: '2026-10-28',
+    clockIn: '08:50 AM',
+    clockOut: '05:20 PM',
+    status: 'PRESENT',
+    hoursWorked: 8.5,
+  },
+];
+
+export const MOCK_AUDIT_LOGS = [
+  {
+    id: 'aud-001',
+    actorName: 'Mohamed Akeel',
+    actorRole: 'SUPER_ADMIN',
+    action: 'LOGIN',
+    module: 'AUTH',
+    details: 'Logged in via secure two-factor session from Colombo, LK',
+    timestamp: '2026-10-28 08:45:12',
+  },
+  {
+    id: 'aud-002',
+    actorName: 'Mohamed Rizwan',
+    actorRole: 'PAYROLL_MANAGER',
+    action: 'FINALIZE',
+    module: 'PAYROLL',
+    details: 'Finalized monthly payroll run PR-2026-09-001 (LKR 3,850,000.00)',
+    timestamp: '2026-09-28 17:30:00',
+  },
+];
